@@ -25,7 +25,8 @@ SECRET_KEY = ')yrshwfo98$_sdk(8cv25(%^6y*xs%#pd3goo9b^+d-4kxb159'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['slgit-env.mwxhwaxxiw.us-east-2.elasticbeanstalk.com']
+# ALLOWED_HOSTS = ['slgit-env.mwxhwaxxiw.us-east-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'lists',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +120,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

@@ -9,4 +9,3 @@ ebgitvenv
 geckodriver.log
 __pycache__
 *.pyc
-/static

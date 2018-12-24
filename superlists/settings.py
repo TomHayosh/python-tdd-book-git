@@ -22,11 +22,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ')yrshwfo98$_sdk(8cv25(%^6y*xs%#pd3goo9b^+d-4kxb159'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if 'LOCAL' in os.environ:
+    # SECURITY WARNING: don't run with debug turned on in production!
+    DEBUG = True
 
-# ALLOWED_HOSTS = ['slgit-env.mwxhwaxxiw.us-east-2.elasticbeanstalk.com']
-ALLOWED_HOSTS = ['*']
+    # ALLOWED_HOSTS = ['slgit-env.mwxhwaxxiw.us-east-2.elasticbeanstalk.com']
+    ALLOWED_HOSTS = []
+else:
+    # SECURITY WARNING: don't run with debug turned on in production!
+    DEBUG = False
+
+    # ALLOWED_HOSTS = ['slgit-env.mwxhwaxxiw.us-east-2.elasticbeanstalk.com']
+    ALLOWED_HOSTS = ['slgit-env.mwxhwaxxiw.us-east-2.elasticbeanstalk.com']
 
 
 # Application definition

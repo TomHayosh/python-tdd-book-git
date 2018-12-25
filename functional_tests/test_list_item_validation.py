@@ -50,7 +50,7 @@ class ItemValidationTest(FunctionalTest):
         # Edith goes to the home page and starts a new list
         self.browser.get(self.live_server_url)
         self.get_item_input_box().send_keys('Buy wellies')
-        self.get_item.input_box().send_keys(Keys.ENTER)
+        self.get_item_input_box().send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: Buy wellies')
 
         # She accidentally tries to enter a duplicate item

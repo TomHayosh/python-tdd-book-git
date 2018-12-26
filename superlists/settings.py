@@ -30,7 +30,7 @@ if 'LOCAL' in os.environ:
     ALLOWED_HOSTS = []
 else:
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = False
+    DEBUG = True
 
     # ALLOWED_HOSTS = ['slgit-env.mwxhwaxxiw.us-east-2.elasticbeanstalk.com']
     ALLOWED_HOSTS = ['slgit-env.mwxhwaxxiw.us-east-2.elasticbeanstalk.com']
